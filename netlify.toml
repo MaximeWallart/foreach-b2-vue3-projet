@@ -3,4 +3,4 @@
 
 [build]
   publish = "public"
-  command = "npx npm i --store=node_modules/.npm-store && npx npm run build"
+  command = "npx npm run build"
