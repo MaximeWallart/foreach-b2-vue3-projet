@@ -7,26 +7,31 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <div class="h-screen bg-gradient-to-b from-[#EAD8F6] to-[#BFD5E3]">
-    <h1
-      class="text-8xl py-28 font-extrabold bg-clip-text text-transparent bg-gradient-to-t from-[#9CBED3] to-[#DBBCF0]"
-    >
+  <div class="h-full bg-gradient-to-b from-[#EAD8F6] to-[#BFD5E3] pb-60">
+    <div class="py-52 font-extrabold border-b-1">
+      <h1
+        class="text-8xl bg-clip-text text-transparent bg-gradient-to-br from-[#9CBED3] to-[#DBBCF0] "
+      >
       MAXIME WALLART
-    </h1>
-    <div class="menu mt-10 mb-10">
+      </h1>
+      <h2 class="pt-10">
+        DÉVELOPPEUR FULLSTACK
+      </h2>
+    </div>
+    <div class="mb-10">
       <ul class="list justify-center">
-        <li class="mr-24">
-          <RouterLink class="button bg-[#FEE9E1]  bg-opacity-50" to="/">
+        <li class="holder mr-24">
+          <RouterLink class="button" to="/">
             Expérience
           </RouterLink>
         </li>
-        <li class="mx-24">
-          <RouterLink class="button bg-[#FEE9E1]  bg-opacity-50" to="/projets">
+        <li class="holder mx-24">
+          <RouterLink class="button" to="/projets">
             Projets
           </RouterLink>
         </li>
-        <li class="ml-24">
-          <RouterLink class="button bg-[#FEE9E1] bg-opacity-50" to="/contacts">
+        <li class="holder ml-24">
+          <RouterLink class="button" to="/contacts">
             Contacts
           </RouterLink>
         </li>
@@ -48,8 +53,18 @@ import { RouterView } from "vue-router";
   display: flex;
   flex-direction: row;
 }
+.holder {
+  padding: 20px;
+  border-radius: 20px;
+  color: black;
+  background-color: white;
+  padding-top: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
 .button {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 5px 100px 20px 100px;
 }
 </style>

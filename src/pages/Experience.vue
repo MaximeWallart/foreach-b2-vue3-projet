@@ -11,12 +11,7 @@
 //         })
 //     }
 // }
-import VueLogo from "~icons/logos/vue";
-import KotlinLogo from "~icons/vscode-icons/file-type-kotlin";
-import JavaLogo from "~icons/logos/java";
-import JSLogo from "~icons/logos/javascript";
-import FlutterLogo from "~icons/logos/flutter";
-import DartLogo from "~icons/logos/dart";
+import iconeLang from '../components/IconeLang.vue'
 
 const langs = [
   { lang: "Vue" },
@@ -29,7 +24,7 @@ const langs = [
 </script>
 
 <template>
-  <h1>Langages maitrisés :</h1>
+  <h1 class="mb-7">Langages maitrisés :</h1>
   <transition-group name="list-complete" tag="p">
     <span
       v-for="(l, index) in langs"
@@ -37,25 +32,7 @@ const langs = [
       :data-index="index"
       class="transition-all duration-1000 inline-block mr-6"
     >
-      <div v-if="l.lang === 'Vue'">
-        <VueLogo />
-      </div>
-      <div v-else-if="l.lang === 'Kotlin'">
-        <KotlinLogo />
-      </div>
-      <div v-if="l.lang === 'Java'">
-        <JavaLogo />
-      </div>
-      <div v-else-if="l.lang === 'Dart'">
-        <DartLogo />
-      </div>
-      <div v-if="l.lang === 'JavaScript'">
-        <JSLogo />
-      </div>
-      <div v-else-if="l.lang === 'Flutter'">
-        <FlutterLogo />
-      </div>
-      <h4 mt-4>{{ l.lang }}</h4>
+      <iconeLang :lang="l.lang" size="50px" ></iconeLang>
     </span>
   </transition-group>
 </template>
